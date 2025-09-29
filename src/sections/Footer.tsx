@@ -91,8 +91,8 @@ const Footer: React.FC = () => {
             <div className="flex items-center space-x-6 text-sm text-gray-400">
               <span>Next.js & Tailwind CSS ile geliştirilmiştir</span>
               <div className="flex items-center space-x-2">
-                <span>❤️</span>
-                <span>İstanbul'da yapıldı</span>
+              <span>❤️</span>
+              <span>İstanbul&apos;da yapıldı</span>
               </div>
             </div>
           </div>

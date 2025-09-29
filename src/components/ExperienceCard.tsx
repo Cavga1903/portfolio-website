@@ -66,3 +66,4 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
 };
 
 export default ExperienceCard;
+export { ExperienceCard };

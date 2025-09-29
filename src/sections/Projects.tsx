@@ -82,7 +82,7 @@ const Projects: React.FC = () => {
                 rel="noopener noreferrer"
                 className="bg-white text-blue-600 hover:bg-gray-100"
               >
-                GitHub'da İncele
+                GitHub&apos;da İncele
               </Button>
               <Button
                 variant="outline"
