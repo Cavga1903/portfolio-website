@@ -15,12 +15,15 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 relative overflow-hidden">
-      {/* Background decorations */}
+    <section id="home" className="min-h-screen flex items-center justify-center bg-slate-900 relative overflow-hidden">
+      {/* Animated Background */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-pink-400 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-pulse delay-500"></div>
+        <div className="absolute -top-40 -right-40 w-96 h-96 bg-accent-500/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-neon-cyan/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-neon-purple/5 rounded-full blur-3xl animate-pulse delay-500"></div>
+        
+        {/* Grid Pattern */}
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(20,241,149,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(20,241,149,0.03)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
       </div>
       
       <div className="container-max section-padding relative z-10">
@@ -32,16 +35,16 @@ const Hero: React.FC = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
           >
-            <div className="space-y-4">
+            <div className="space-y-6">
               <motion.h1 
-                className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white"
+                className="text-5xl md:text-7xl font-display font-bold leading-tight"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
               >
                 Merhaba, Ben{' '}
                 <motion.span 
-                  className="text-blue-600 dark:text-blue-400"
+                  className="gradient-text"
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5, delay: 0.4 }}
@@ -50,18 +53,18 @@ const Hero: React.FC = () => {
                 </motion.span>
               </motion.h1>
               <motion.h2 
-                className="text-2xl md:text-3xl text-gray-700 dark:text-gray-300"
+                className="text-2xl md:text-4xl font-display font-semibold text-slate-300"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
               >
                 {PERSONAL_INFO.title}
               </motion.h2>
               <motion.p 
-                className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl"
+                className="text-lg md:text-xl text-slate-400 max-w-2xl leading-relaxed"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
               >
                 {PERSONAL_INFO.description}
               </motion.p>
@@ -69,15 +72,17 @@ const Hero: React.FC = () => {
 
             {/* Location */}
             <motion.div 
-              className="flex items-center space-x-2 text-gray-600 dark:text-gray-400"
+              className="flex items-center space-x-3 text-slate-400"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
             >
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-              </svg>
-              <span>{PERSONAL_INFO.location}</span>
+              <div className="w-6 h-6 bg-accent-500/20 rounded-full flex items-center justify-center">
+                <svg className="w-4 h-4 text-accent-500" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                </svg>
+              </div>
+              <span className="text-lg">{PERSONAL_INFO.location}</span>
             </motion.div>
 
             {/* CTA Buttons */}
@@ -107,10 +112,10 @@ const Hero: React.FC = () => {
 
             {/* Social Links */}
             <motion.div 
-              className="flex space-x-4"
+              className="flex space-x-6"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.7 }}
+              transition={{ duration: 0.6, delay: 1.0 }}
             >
               {PERSONAL_INFO.socialLinks.map((social, index) => (
                 <motion.a
@@ -118,17 +123,17 @@ const Hero: React.FC = () => {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-white dark:bg-gray-800 rounded-full flex items-center justify-center shadow-md hover:shadow-lg transition-shadow duration-200 hover:scale-110"
+                  className="group w-12 h-12 bg-slate-800/50 backdrop-blur-sm rounded-xl flex items-center justify-center border border-slate-700/50 hover:border-accent-500/50 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-accent-500/20"
                   initial={{ opacity: 0, scale: 0 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.3, delay: 0.8 + index * 0.1 }}
-                  whileHover={{ scale: 1.1 }}
+                  transition={{ duration: 0.3, delay: 1.2 + index * 0.1 }}
+                  whileHover={{ scale: 1.1, y: -2 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <span className="text-gray-600 dark:text-gray-400 font-semibold">
+                  <span className="text-slate-400 group-hover:text-accent-500 font-semibold text-lg transition-colors duration-300">
                     {social.icon === 'github' && 'G'}
                     {social.icon === 'linkedin' && 'L'}
-                    {social.icon === 'twitter' && 'T'}
+                    {social.icon === 'linktree' && 'T'}
                     {social.icon === 'email' && '@'}
                   </span>
                 </motion.a>

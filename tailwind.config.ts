@@ -12,17 +12,23 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        primary: {
-          50: '#eff6ff',
-          100: '#dbeafe',
-          200: '#bfdbfe',
-          300: '#93c5fd',
-          400: '#60a5fa',
-          500: '#3b82f6',
-          600: '#2563eb',
-          700: '#1d4ed8',
-          800: '#1e40af',
-          900: '#1e3a8a',
+        accent: {
+          50: '#f0fdf4',
+          100: '#dcfce7',
+          200: '#bbf7d0',
+          300: '#86efac',
+          400: '#4ade80',
+          500: '#14F195', // Ana vurgu rengi
+          600: '#22c55e',
+          700: '#16a34a',
+          800: '#15803d',
+          900: '#14532d',
+        },
+        neon: {
+          cyan: '#00f5ff',
+          green: '#14F195',
+          blue: '#00d4ff',
+          purple: '#a855f7',
         },
         gray: {
           50: '#f9fafb',
@@ -38,8 +44,9 @@ const config: Config = {
         }
       },
       fontFamily: {
-        sans: ["var(--font-geist-sans)", "system-ui", "sans-serif"],
-        mono: ["var(--font-geist-mono)", "monospace"],
+        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
+        display: ["var(--font-sora)", "system-ui", "sans-serif"],
+        mono: ["JetBrains Mono", "monospace"],
       },
       spacing: {
         '18': '4.5rem',

@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { SkillCard } from '@/components/SkillCard';
 import { SKILLS } from '@/data/skills';
 
@@ -20,60 +21,128 @@ const Skills: React.FC = () => {
   };
 
   return (
-    <section id="skills" className="section-padding bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800">
-      <div className="container-max">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Yeteneklerim
-          </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+    <section id="skills" className="section-padding bg-slate-900 relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(20,241,149,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(20,241,149,0.02)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
+      
+      <div className="container-max relative z-10">
+        <div className="text-center mb-20">
+          <motion.h2 
+            className="text-4xl md:text-6xl font-display font-bold mb-6"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <span className="gradient-text">Yeteneklerim</span>
+          </motion.h2>
+          <motion.p 
+            className="text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
             Modern web geliştirme teknolojileri konusunda kapsamlı deneyime sahibim. 
             Sürekli öğrenmeye ve kendimi geliştirmeye odaklanırım.
-          </p>
+          </motion.p>
         </div>
 
-        <div className="space-y-12">
-          {Object.entries(skillsByCategory).map(([category, skills]) => (
-            <div key={category}>
-              <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6 text-center">
+        <div className="space-y-16">
+          {Object.entries(skillsByCategory).map(([category, skills], categoryIndex) => (
+            <motion.div 
+              key={category}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: categoryIndex * 0.2 }}
+              viewport={{ once: true }}
+            >
+              <motion.h3 
+                className="text-3xl font-display font-bold text-slate-200 mb-8 text-center"
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: categoryIndex * 0.2 + 0.2 }}
+                viewport={{ once: true }}
+              >
                 {categoryLabels[category as keyof typeof categoryLabels]}
-              </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-                {skills.map((skill) => (
-                  <SkillCard key={skill.id} skill={skill} />
+              </motion.h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                {skills.map((skill, skillIndex) => (
+                  <motion.div
+                    key={skill.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ 
+                      duration: 0.6, 
+                      delay: categoryIndex * 0.2 + skillIndex * 0.1 
+                    }}
+                    viewport={{ once: true }}
+                  >
+                    <SkillCard skill={skill} />
+                  </motion.div>
                 ))}
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
 
         {/* Additional Info */}
-        <div className="mt-16 text-center">
-          <div className="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-              Sürekli Öğrenme
-            </h3>
-            <p className="text-gray-600 dark:text-gray-400 mb-6">
+        <motion.div 
+          className="mt-20 text-center"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          viewport={{ once: true }}
+        >
+          <div className="glass-effect rounded-3xl p-10 shadow-2xl max-w-5xl mx-auto">
+            <motion.h3 
+              className="text-3xl font-display font-bold text-slate-200 mb-6"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <span className="gradient-text">Sürekli Öğrenme</span>
+            </motion.h3>
+            <motion.p 
+              className="text-lg text-slate-400 mb-8 leading-relaxed max-w-3xl mx-auto"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
+              viewport={{ once: true }}
+            >
               Teknoloji dünyası hızla değişiyor ve ben bu değişime ayak uydurmak için 
               sürekli öğrenmeye devam ediyorum. Yeni teknolojileri takip eder, 
               projelerimde uygular ve toplulukla paylaşırım.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <div className="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-4 py-2 rounded-full text-sm font-medium">
-                Online Kurslar
-              </div>
-              <div className="bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 px-4 py-2 rounded-full text-sm font-medium">
-                Açık Kaynak Katkıları
-              </div>
-              <div className="bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 px-4 py-2 rounded-full text-sm font-medium">
-                Teknik Blog Yazıları
-              </div>
-              <div className="bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 px-4 py-2 rounded-full text-sm font-medium">
-                Konferans ve Etkinlikler
-              </div>
-            </div>
+            </motion.p>
+            <motion.div 
+              className="flex flex-wrap justify-center gap-4"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 1.0 }}
+              viewport={{ once: true }}
+            >
+              {[
+                { text: "Online Kurslar", color: "bg-accent-500/20 text-accent-400 border-accent-500/30" },
+                { text: "Açık Kaynak Katkıları", color: "bg-neon-cyan/20 text-neon-cyan border-neon-cyan/30" },
+                { text: "Teknik Blog Yazıları", color: "bg-neon-purple/20 text-neon-purple border-neon-purple/30" },
+                { text: "Konferans ve Etkinlikler", color: "bg-accent-500/20 text-accent-400 border-accent-500/30" }
+              ].map((item, index) => (
+                <motion.div
+                  key={index}
+                  className={`${item.color} px-6 py-3 rounded-full text-sm font-medium border backdrop-blur-sm hover:scale-105 transition-all duration-300`}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.4, delay: 1.2 + index * 0.1 }}
+                  viewport={{ once: true }}
+                  whileHover={{ scale: 1.05 }}
+                >
+                  {item.text}
+                </motion.div>
+              ))}
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
