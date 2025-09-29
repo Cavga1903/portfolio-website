@@ -1,0 +1,89 @@
+{
+  "Hero": {
+    "greeting": "Merhaba, Ben",
+    "title": "Mobil Frontend Geliştirici",
+    "subtitle": "React Native & React.js Uzmanı",
+    "description": "Supabase, Tailwind CSS ve RESTful API'ler konusunda deneyimli Freelance Mobil Frontend Geliştirici. Şu anda University of the People'da Bilgisayar Bilimleri B.Sc. programını sürdürüyorum ve Siliconmade Academy'den uygulamalı eğitim alıyorum. Temiz kod ve dinamik UI ile kullanıcı odaklı uygulamalar geliştirmeye odaklanıyorum.",
+    "viewProjects": "Projelerimi İncele",
+    "getInTouch": "İletişime Geç"
+  },
+  "Navbar": {
+    "home": "Ana Sayfa",
+    "about": "Hakkımda",
+    "skills": "Yetenekler",
+    "projects": "Projeler",
+    "experience": "Deneyim",
+    "contact": "İletişim",
+    "downloadCV": "CV İndir"
+  },
+  "About": {
+    "title": "Hakkımda",
+    "description": "Teknoloji tutkunu bir yazılım geliştiricisi olarak, kullanıcı deneyimini ön planda tutan ve modern web teknolojileri ile performanslı çözümler üretmeye odaklanıyorum.",
+    "passions": "Tutkularım",
+    "passion1": "Modern web teknolojileri",
+    "passion2": "Kullanıcı deneyimi tasarımı",
+    "passion3": "Performans optimizasyonu",
+    "passion4": "Açık kaynak projeler",
+    "passion5": "Teknik yazı yazma",
+    "passion6": "Mentorluk ve eğitim",
+    "stats": {
+      "experience": "Yıl Deneyim",
+      "projects": "Tamamlanan Proje",
+      "clients": "Mutlu Müşteri",
+      "technologies": "Teknoloji"
+    }
+  },
+  "Skills": {
+    "title": "Yeteneklerim",
+    "description": "Modern web geliştirme teknolojileri konusunda kapsamlı deneyime sahibim. Sürekli öğrenmeye ve kendimi geliştirmeye odaklanırım.",
+    "continuousLearning": "Sürekli Öğrenme",
+    "learningDescription": "Teknoloji dünyası hızla değişiyor ve ben bu değişime ayak uydurmak için sürekli öğrenmeye devam ediyorum. Yeni teknolojileri takip eder, projelerimde uygular ve toplulukla paylaşırım.",
+    "onlineCourses": "Online Kurslar",
+    "openSource": "Açık Kaynak Katkıları",
+    "technicalBlogs": "Teknik Blog Yazıları",
+    "conferences": "Konferans ve Etkinlikler"
+  },
+  "Projects": {
+    "title": "Projelerim",
+    "description": "Geliştirdiğim projelerden bazılarını inceleyebilirsiniz. Her proje, farklı teknolojiler ve yaklaşımlar kullanılarak oluşturulmuştur.",
+    "allProjects": "Tüm Projeler",
+    "featured": "Öne Çıkanlar",
+    "seeMore": "Daha Fazla Proje Görmek İster misiniz?",
+    "seeMoreDescription": "GitHub hesabımda daha fazla proje ve açık kaynak katkılarımı inceleyebilirsiniz. Ayrıca yeni projeler hakkında güncel bilgi almak için beni takip edebilirsiniz.",
+    "viewOnGitHub": "GitHub'da İncele",
+    "suggestProject": "Proje Önerisi Yap"
+  },
+  "Experience": {
+    "title": "Deneyimim",
+    "description": "Kariyerim boyunca farklı şirketlerde ve projelerde çalışarak kapsamlı deneyim kazandım. Her pozisyonda yeni beceriler öğrendim ve kendimi sürekli geliştirdim.",
+    "corporateExperience": "Kurumsal Deneyim",
+    "corporateDescription": "Büyük ekiplerde çalışma ve karmaşık projeleri yönetme deneyimi",
+    "fastLearning": "Hızlı Öğrenme",
+    "fastLearningDescription": "Yeni teknolojileri hızla öğrenme ve projelerde uygulama yeteneği",
+    "teamwork": "Takım Çalışması",
+    "teamworkDescription": "Farklı rollerde çalışma ve ekip liderliği deneyimi"
+  },
+  "Contact": {
+    "title": "İletişime Geçin",
+    "description": "Projeleriniz hakkında konuşmak, işbirliği yapmak veya sadece merhaba demek için benimle iletişime geçebilirsiniz. En kısa sürede size dönüş yapacağım.",
+    "contactInfo": "İletişim Bilgileri",
+    "socialMedia": "Sosyal Medya",
+    "sendMessage": "Mesaj Gönder",
+    "name": "Ad Soyad",
+    "email": "Email",
+    "subject": "Konu",
+    "message": "Mesaj",
+    "sending": "Gönderiliyor...",
+    "send": "Mesaj Gönder",
+    "success": "Mesajınız başarıyla gönderildi! En kısa sürede size dönüş yapacağım.",
+    "error": "Mesaj gönderilirken bir hata oluştu. Lütfen tekrar deneyin."
+  },
+  "Footer": {
+    "description": "Modern web teknolojileri ile kullanıcı deneyimini ön planda tutan, performanslı ve ölçeklenebilir uygulamalar geliştiren yazılım geliştiricisi.",
+    "quickLinks": "Hızlı Linkler",
+    "contact": "İletişim",
+    "rights": "Tüm hakları saklıdır.",
+    "madeWith": "Next.js & Tailwind CSS ile geliştirilmiştir",
+    "madeIn": "İzmir'da yapıldı"
+  }
+}

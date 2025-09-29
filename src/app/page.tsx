@@ -4,6 +4,7 @@ import About from '@/sections/About';
 import Skills from '@/sections/Skills';
 import Projects from '@/sections/Projects';
 import Experience from '@/sections/Experience';
+import AICVGenerator from '@/sections/AICVGenerator';
 import Contact from '@/sections/Contact';
 import Footer from '@/sections/Footer';
 
@@ -17,6 +18,7 @@ export default function Home() {
         <Skills />
         <Projects />
         <Experience />
+        <AICVGenerator />
         <Contact />
       </main>
       <Footer />

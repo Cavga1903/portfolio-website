@@ -3,46 +3,57 @@ import { Experience } from '@/types';
 export const EXPERIENCES: Experience[] = [
   {
     id: 1,
-    company: "TechCorp Solutions",
-    position: "Senior Full Stack Developer",
-    startDate: "2022-01",
-    endDate: "2024-12",
-    current: false,
-    description: "E-ticaret platformları ve kurumsal web uygulamaları geliştirme. React, Node.js ve cloud teknolojileri kullanarak ölçeklenebilir çözümler üretme.",
-    technologies: ["React", "Node.js", "TypeScript", "AWS", "PostgreSQL", "Docker"],
-    location: "İstanbul, Türkiye"
+    company: "Turkcell Global Bilgi",
+    position: "Customer Service Representative",
+    startDate: "2025-08",
+    endDate: null,
+    current: true,
+    description: "Müşteri sorunlarını çözme, net iletişim kurma ve teknik destek sağlama üzerine odaklanarak kişilerarası ve analitik becerilerimi geliştiriyorum.",
+    technologies: ["Customer Service", "Problem Solving", "Communication", "Technical Support"],
+    location: "Bornova, İzmir"
   },
   {
     id: 2,
-    company: "StartupXYZ",
-    position: "Frontend Developer",
-    startDate: "2020-06",
-    endDate: "2021-12",
-    current: false,
-    description: "Mobil-first yaklaşımla responsive web uygulamaları geliştirme. Kullanıcı deneyimi odaklı tasarım ve performans optimizasyonu.",
-    technologies: ["React", "Vue.js", "JavaScript", "SASS", "Webpack", "Jest"],
-    location: "İstanbul, Türkiye"
+    company: "Upwork",
+    position: "React Native Developer | Freelance",
+    startDate: "2025-07",
+    endDate: null,
+    current: true,
+    description: "React Native ile platformlar arası mobil uygulamalar geliştirdim. Veri yönetimi için RESTful API'ler ve Supabase entegrasyonu yaptım. Tailwind CSS ile kullanıcı etkileşimini %30 artıran dinamik arayüzler tasarladım.",
+    technologies: ["React Native", "RESTful APIs", "Supabase", "Tailwind CSS", "JavaScript", "TypeScript"],
+    location: "İzmir, Türkiye"
   },
   {
     id: 3,
-    company: "Freelance",
-    position: "Web Developer",
-    startDate: "2019-01",
-    endDate: "2020-05",
+    company: "Siliconmade Academy",
+    position: "Mobile and Frontend Development Trainee",
+    startDate: "2025-02",
+    endDate: "2025-07",
     current: false,
-    description: "Küçük ve orta ölçekli işletmeler için web siteleri ve web uygulamaları geliştirme. Müşteri ihtiyaçlarına özel çözümler üretme.",
-    technologies: ["HTML", "CSS", "JavaScript", "PHP", "MySQL", "WordPress"],
-    location: "Remote"
+    description: "6 ay / 184 saatlik Mobil ve Frontend Geliştirme stajını tamamladım. Gerçek dünya projeleri geliştirerek (ürün listeleme uygulamaları, admin panelleri) UI/UX ve performansı iyileştirdim. React, React Native, REST API, Supabase, Tailwind CSS ve Firebase konularında pratik deneyim kazandım.",
+    technologies: ["React", "React Native", "REST API", "Supabase", "Tailwind CSS", "Firebase", "UI/UX"],
+    location: "İzmir, Türkiye"
   },
   {
     id: 4,
-    company: "Digital Agency ABC",
-    position: "Junior Web Developer",
-    startDate: "2018-03",
-    endDate: "2018-12",
+    company: "Concentrix",
+    position: "Customer Service Representative",
+    startDate: "2024-08",
+    endDate: "2025-01",
     current: false,
-    description: "Web tasarım ve geliştirme projelerinde yer alma. HTML, CSS ve JavaScript kullanarak statik ve dinamik web siteleri oluşturma.",
-    technologies: ["HTML", "CSS", "JavaScript", "jQuery", "Bootstrap", "Photoshop"],
-    location: "Ankara, Türkiye"
+    description: "Müşteri hizmetleri alanında çalışarak iletişim becerilerimi geliştirdim ve problem çözme yeteneklerimi artırdım.",
+    technologies: ["Customer Service", "Communication", "Problem Solving"],
+    location: "İzmir, Türkiye"
+  },
+  {
+    id: 5,
+    company: "İzmir Büyükşehir Belediyesi",
+    position: "Intern",
+    startDate: "2024-06",
+    endDate: "2024-08",
+    current: false,
+    description: "Belediye bünyesinde staj yaparak kurumsal çalışma ortamını deneyimledim ve temel iş becerilerini geliştirdim.",
+    technologies: ["Office Work", "Team Collaboration", "Administrative Skills"],
+    location: "İzmir, Türkiye"
   }
 ];

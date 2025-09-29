@@ -24,6 +24,7 @@ const Header: React.FC = () => {
     { href: '#skills', label: 'Yetenekler' },
     { href: '#projects', label: 'Projeler' },
     { href: '#experience', label: 'Deneyim' },
+    { href: '#ai-cv-generator', label: 'AI CV' },
     { href: '#contact', label: 'İletişim' }
   ];
 
