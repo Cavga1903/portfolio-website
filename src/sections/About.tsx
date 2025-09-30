@@ -3,33 +3,35 @@ import { PERSONAL_INFO } from '@/data/personalInfo';
 
 const About: React.FC = () => {
   return (
-    <section id="about" className="section-padding bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800">
-      <div className="container-max">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Hakkımda
+    <section id="about" className="py-16 sm:py-20 lg:py-24 bg-slate-800">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6">
+            <span className="bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent">
+              Hakkımda
+            </span>
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             Teknoloji tutkunu bir yazılım geliştiricisi olarak, kullanıcı deneyimini ön planda tutan 
             ve modern web teknolojileri ile performanslı çözümler üretmeye odaklanıyorum.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Content */}
           <div className="space-y-6">
-            <div className="prose prose-lg dark:prose-invert max-w-none">
-              <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+            <div className="space-y-4">
+              <p className="text-gray-300 leading-relaxed text-base sm:text-lg">
                 {PERSONAL_INFO.description}
               </p>
               
-              <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+              <p className="text-gray-300 leading-relaxed text-base sm:text-lg">
                 Kariyerim boyunca farklı projelerde çalışarak, frontend ve backend teknolojilerinde 
                 derinlemesine deneyim kazandım. Özellikle React ekosistemi, Node.js ve modern 
                 veritabanı teknolojileri konularında uzmanlaştım.
               </p>
               
-              <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+              <p className="text-gray-300 leading-relaxed text-base sm:text-lg">
                 Sürekli öğrenmeye ve kendimi geliştirmeye odaklanırım. Yeni teknolojileri takip eder, 
                 projelerimde uygular ve toplulukla paylaşırım. Açık kaynak projelere katkıda bulunmayı 
                 ve teknik yazılar yazmayı seviyorum.
@@ -37,36 +39,36 @@ const About: React.FC = () => {
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-2 gap-6 pt-8">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">
+            <div className="grid grid-cols-2 gap-4 sm:gap-6 pt-6 sm:pt-8">
+              <div className="text-center p-4 bg-slate-700/50 rounded-xl">
+                <div className="text-2xl sm:text-3xl font-bold text-green-400 mb-2">
                   5+
                 </div>
-                <div className="text-gray-600 dark:text-gray-400">
+                <div className="text-gray-300 text-sm sm:text-base">
                   Yıl Deneyim
                 </div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">
+              <div className="text-center p-4 bg-slate-700/50 rounded-xl">
+                <div className="text-2xl sm:text-3xl font-bold text-green-400 mb-2">
                   50+
                 </div>
-                <div className="text-gray-600 dark:text-gray-400">
+                <div className="text-gray-300 text-sm sm:text-base">
                   Tamamlanan Proje
                 </div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">
+              <div className="text-center p-4 bg-slate-700/50 rounded-xl">
+                <div className="text-2xl sm:text-3xl font-bold text-green-400 mb-2">
                   20+
                 </div>
-                <div className="text-gray-600 dark:text-gray-400">
+                <div className="text-gray-300 text-sm sm:text-base">
                   Mutlu Müşteri
                 </div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">
+              <div className="text-center p-4 bg-slate-700/50 rounded-xl">
+                <div className="text-2xl sm:text-3xl font-bold text-green-400 mb-2">
                   10+
                 </div>
-                <div className="text-gray-600 dark:text-gray-400">
+                <div className="text-gray-300 text-sm sm:text-base">
                   Teknoloji
                 </div>
               </div>

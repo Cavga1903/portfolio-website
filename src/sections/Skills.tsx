@@ -21,68 +21,35 @@ const Skills: React.FC = () => {
   };
 
   return (
-    <section id="skills" className="section-padding bg-slate-900 relative overflow-hidden">
+    <section id="skills" className="py-16 sm:py-20 lg:py-24 bg-slate-900 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(20,241,149,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(20,241,149,0.02)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
       
-      <div className="container-max relative z-10">
-        <div className="text-center mb-20">
-          <motion.h2 
-            className="text-4xl md:text-6xl font-display font-bold mb-6"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <span className="gradient-text">Yeteneklerim</span>
-          </motion.h2>
-          <motion.p 
-            className="text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            viewport={{ once: true }}
-          >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="text-center mb-12 sm:mb-16 lg:mb-20">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
+            <span className="bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent">
+              Yeteneklerim
+            </span>
+          </h2>
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             Modern web geliştirme teknolojileri konusunda kapsamlı deneyime sahibim. 
             Sürekli öğrenmeye ve kendimi geliştirmeye odaklanırım.
-          </motion.p>
+          </p>
         </div>
 
-        <div className="space-y-16">
+        <div className="space-y-12 sm:space-y-16">
           {Object.entries(skillsByCategory).map(([category, skills], categoryIndex) => (
-            <motion.div 
-              key={category}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: categoryIndex * 0.2 }}
-              viewport={{ once: true }}
-            >
-              <motion.h3 
-                className="text-3xl font-display font-bold text-slate-200 mb-8 text-center"
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: categoryIndex * 0.2 + 0.2 }}
-                viewport={{ once: true }}
-              >
+            <div key={category}>
+              <h3 className="text-2xl sm:text-3xl font-bold text-slate-200 mb-6 sm:mb-8 text-center">
                 {categoryLabels[category as keyof typeof categoryLabels]}
-              </motion.h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                {skills.map((skill, skillIndex) => (
-                  <motion.div
-                    key={skill.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ 
-                      duration: 0.6, 
-                      delay: categoryIndex * 0.2 + skillIndex * 0.1 
-                    }}
-                    viewport={{ once: true }}
-                  >
-                    <SkillCard skill={skill} />
-                  </motion.div>
+              </h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
+                {skills.map((skill) => (
+                  <SkillCard key={skill.id} skill={skill} />
                 ))}
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 

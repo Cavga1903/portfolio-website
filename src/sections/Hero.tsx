@@ -15,9 +15,16 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center bg-slate-900 text-white py-20 px-4">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <section id="home" className="min-h-screen flex items-center justify-center bg-slate-900 text-white relative overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-20 right-20 w-72 h-72 bg-green-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 left-20 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl"></div>
+      </div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Content */}
           <motion.div 
             className="space-y-8"
@@ -25,17 +32,17 @@ const Hero: React.FC = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
           >
-            <div className="space-y-6">
-              <h1 className="text-5xl md:text-7xl font-bold text-white">
+            <div className="space-y-4 sm:space-y-6">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
                 Merhaba, Ben{' '}
-                <span className="text-green-400">
+                <span className="text-green-400 bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent">
                   {PERSONAL_INFO.name}
                 </span>
               </h1>
-              <h2 className="text-2xl md:text-4xl font-semibold text-gray-300">
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-300">
                 {PERSONAL_INFO.title}
               </h2>
-              <p className="text-lg md:text-xl text-gray-400 max-w-2xl">
+              <p className="text-base sm:text-lg md:text-xl text-gray-400 max-w-2xl leading-relaxed">
                 {PERSONAL_INFO.description}
               </p>
             </div>
@@ -57,32 +64,28 @@ const Hero: React.FC = () => {
 
             {/* CTA Buttons */}
             <motion.div 
-              className="flex flex-col sm:flex-row gap-4"
+              className="flex flex-col sm:flex-row gap-4 mt-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
             >
-              <Button
-                variant="primary"
-                size="lg"
+              <button
                 onClick={() => scrollToSection('#projects')}
-                className="w-full sm:w-auto"
+                className="bg-green-500 hover:bg-green-600 text-slate-900 font-semibold py-3 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/25 transform hover:-translate-y-1 hover:scale-105 w-full sm:w-auto"
               >
                 Projelerimi İncele
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
+              </button>
+              <button
                 onClick={() => scrollToSection('#contact')}
-                className="w-full sm:w-auto"
+                className="bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white font-medium py-3 px-8 rounded-xl transition-all duration-300 border border-slate-700 hover:border-slate-600 w-full sm:w-auto"
               >
                 İletişime Geç
-              </Button>
+              </button>
             </motion.div>
 
             {/* Social Links */}
             <motion.div 
-              className="flex space-x-6"
+              className="flex flex-wrap gap-4 mt-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1.0 }}
