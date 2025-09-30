@@ -6,10 +6,10 @@ const locales = ['tr', 'en', 'de'];
 
 export default getRequestConfig(async ({ locale }) => {
   // Validate that the incoming `locale` parameter is valid
-  if (!locales.includes(locale as any)) notFound();
+  if (!locale || !locales.includes(locale as 'tr' | 'en' | 'de')) notFound();
 
   return {
-    locale,
+    locale: locale as 'tr' | 'en' | 'de',
     messages: (await import(`../messages/${locale}.json`)).default
   };
 });

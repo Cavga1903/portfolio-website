@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { useLocale, useTranslations } from 'next-intl';
+import { useLocale } from 'next-intl';
 import { useRouter, usePathname } from 'next/navigation';
 
 const languages = [
@@ -15,7 +15,6 @@ export default function LanguageSwitcher() {
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
-  const t = useTranslations('nav');
 
   const currentLanguage = languages.find(lang => lang.code === locale) || languages[0];
 

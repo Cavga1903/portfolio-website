@@ -2,10 +2,8 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { useTranslations, useLocale } from 'next-intl';
 import { Button } from '@/components/ui';
 import { PERSONAL_INFO } from '@/data/personalInfo';
-import LanguageSwitcher from '@/components/LanguageSwitcher';
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
