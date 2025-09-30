@@ -59,12 +59,14 @@ const Header: React.FC = () => {
           </Link>
 
           {/* Tablet Navigation */}
-          <nav className="hidden md:flex lg:hidden items-center space-x-6">
-            {navItems.slice(0, 4).map((item) => (
+          <nav className="hidden md:flex lg:hidden items-center">
+            {navItems.slice(0, 4).map((item, index) => (
               <button
                 key={item.href}
                 onClick={() => scrollToSection(item.href)}
-                className="text-slate-300 hover:text-green-400 transition-colors duration-200 font-medium text-xs py-2 px-3 rounded-lg hover:bg-slate-800/50"
+                className={`text-slate-300 hover:text-green-400 transition-colors duration-200 font-medium text-xs py-2 px-3 rounded-lg hover:bg-slate-800/50 ${
+                  index > 0 ? 'ml-4' : ''
+                }`}
               >
                 {item.label}
               </button>
@@ -72,12 +74,14 @@ const Header: React.FC = () => {
           </nav>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8 xl:space-x-10">
-            {navItems.map((item) => (
+          <nav className="hidden lg:flex items-center">
+            {navItems.map((item, index) => (
               <button
                 key={item.href}
                 onClick={() => scrollToSection(item.href)}
-                className="navbar-link text-slate-300 hover:text-green-400 transition-colors duration-200 font-medium text-sm xl:text-base py-2 px-4 rounded-lg hover:bg-slate-800/50"
+                className={`navbar-link text-slate-300 hover:text-green-400 transition-colors duration-200 font-medium text-sm xl:text-base py-2 px-4 rounded-lg hover:bg-slate-800/50 ${
+                  index > 0 ? 'ml-6 xl:ml-8' : ''
+                }`}
               >
                 {item.label}
               </button>
