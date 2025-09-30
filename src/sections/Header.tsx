@@ -1,150 +1,183 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import { Button } from '@/components/ui';
+import { PERSONAL_INFO } from '@/data/personalInfo';
 
-const navLinks = [
-  { name: 'Ana Sayfa', href: '#home' },
-  { name: 'Hakkımda', href: '#about' },
-  { name: 'Yetenekler', href: '#skills' },
-  { name: 'Projeler', href: '#projects' },
-  { name: 'Deneyim', href: '#experience' },
-  { name: 'AI CV', href: '#ai-cv-generator' },
-  { name: 'İletişim', href: '#contact' },
-];
-
-const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
+      setIsScrolled(window.scrollY > 50);
     };
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Mobil menü açıkken body'nin scroll olmasını engelle
-  useEffect(() => {
-    if (isMenuOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'auto';
-    }
-  }, [isMenuOpen]);
+  const navItems = [
+    { href: '#home', label: 'Ana Sayfa' },
+    { href: '#about', label: 'Hakkımda' },
+    { href: '#skills', label: 'Yetenekler' },
+    { href: '#projects', label: 'Projeler' },
+    { href: '#experience', label: 'Deneyim' },
+    { href: '#ai-cv-generator', label: 'AI CV' },
+    { href: '#contact', label: 'İletişim' }
+  ];
 
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
-    setIsMenuOpen(false);
+    setIsMobileMenuOpen(false);
   };
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        isScrolled || isMenuOpen ? 'bg-slate-900/95 backdrop-blur-md shadow-lg border-b border-slate-800' : 'bg-transparent'
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled
+          ? 'bg-slate-900/95 backdrop-blur-md shadow-lg border-b border-slate-800'
+          : 'bg-transparent'
       }`}
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 sm:h-18 lg:h-20">
+      <div className="max-w-7xl mx-auto container-spacing">
+        <div className="flex items-center justify-between h-14 sm:h-16 lg:h-18">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2 sm:space-x-3">
+          <Link href="#home" className="flex items-center space-x-2 sm:space-x-3 mr-8 lg:mr-12">
             <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-r from-green-500 to-cyan-500 rounded-lg flex items-center justify-center shadow-lg">
               <span className="text-white font-bold text-lg sm:text-xl">
-                T
+                {PERSONAL_INFO.name.charAt(0)}
               </span>
             </div>
-            <span className="text-xl sm:text-2xl font-bold text-white font-sora">
-              Tolga Çavga
+            <span className="font-bold text-lg sm:text-xl lg:text-2xl text-white">
+              {PERSONAL_INFO.name}
             </span>
           </Link>
 
-          {/* Desktop Menü */}
-          <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8">
-            {navLinks.map((link) => (
+          {/* Tablet Navigation */}
+          <nav className="hidden md:flex lg:hidden items-center space-x-6">
+            {navItems.slice(0, 4).map((item) => (
               <button
-                key={link.name}
-                onClick={() => scrollToSection(link.href)}
-                className="text-slate-300 hover:text-green-400 transition-colors duration-300 font-medium text-sm xl:text-base py-2 px-3 rounded-lg hover:bg-slate-800/50"
+                key={item.href}
+                onClick={() => scrollToSection(item.href)}
+                className="text-slate-300 hover:text-green-400 transition-colors duration-200 font-medium text-xs py-2 px-3 rounded-lg hover:bg-slate-800/50"
               >
-                {link.name}
+                {item.label}
               </button>
             ))}
           </nav>
 
-          {/* CV Butonu - Desktop */}
-          <div className="hidden lg:block">
-            <a
-              href="/TolgaCavgaENCV.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="border border-green-500 text-green-500 px-4 py-2 rounded-md hover:bg-green-500 hover:text-slate-900 transition-all duration-300 font-semibold"
-            >
-              CV İndir
-            </a>
-          </div>
-
-          {/* Mobil Menü Butonu (Hamburger) */}
-          <div className="lg:hidden">
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-white z-50 p-2 rounded-lg hover:bg-slate-800/50 transition-all duration-200"
-              aria-label="Menüyü aç/kapat"
-            >
-              {isMenuOpen ? (
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              ) : (
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
-                </svg>
-              )}
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* Mobil Menü Overlay */}
-      <AnimatePresence>
-        {isMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="lg:hidden fixed inset-0 bg-slate-900/95 backdrop-blur-lg flex flex-col items-center justify-center space-y-6"
-          >
-            {navLinks.map((link, index) => (
-              <motion.button
-                key={link.name}
-                onClick={() => scrollToSection(link.href)}
-                className="text-2xl sm:text-3xl text-slate-200 hover:text-green-400 transition-colors duration-300 font-medium"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex items-center space-x-8 xl:space-x-10">
+            {navItems.map((item) => (
+              <button
+                key={item.href}
+                onClick={() => scrollToSection(item.href)}
+                className="navbar-link text-slate-300 hover:text-green-400 transition-colors duration-200 font-medium text-sm xl:text-base py-2 px-4 rounded-lg hover:bg-slate-800/50"
               >
-                {link.name}
-              </motion.button>
+                {item.label}
+              </button>
             ))}
-            <motion.a
-              href="/TolgaCavgaENCV.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-8 border border-green-500 text-green-500 px-6 py-3 rounded-md hover:bg-green-500 hover:text-slate-900 transition-all duration-300 font-semibold text-lg"
-              onClick={() => setIsMenuOpen(false)}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: navLinks.length * 0.1 }}
+          </nav>
+
+          {/* CTA Buttons */}
+          <div className="hidden md:flex items-center space-x-4 lg:space-x-6">
+            {PERSONAL_INFO.cvUrl && (
+              <Button
+                variant="outline"
+                size="sm"
+                href={PERSONAL_INFO.cvUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs sm:text-sm px-4 py-2 border-slate-600 text-slate-300 hover:bg-slate-800 hover:text-green-400"
+              >
+                CV İndir
+              </Button>
+            )}
+            <Button
+              variant="primary"
+              size="sm"
+              onClick={() => scrollToSection('#contact')}
+              className="text-xs sm:text-sm px-5 py-2 bg-green-500 hover:bg-green-600 text-slate-900 font-semibold"
             >
-              CV İndir
-            </motion.a>
-          </motion.div>
+              İletişime Geç
+            </Button>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="md:hidden p-2 rounded-lg text-slate-300 hover:text-green-400 hover:bg-slate-800/50 transition-all duration-200"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle mobile menu"
+          >
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              {isMobileMenuOpen ? (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              ) : (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              )}
+            </svg>
+          </button>
+        </div>
+
+        {/* Mobile Menu */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden py-6 border-t border-slate-800 bg-slate-900/95 backdrop-blur-md">
+            <nav className="flex flex-col space-y-3">
+              {navItems.map((item) => (
+                <button
+                  key={item.href}
+                  onClick={() => scrollToSection(item.href)}
+                  className="text-left text-slate-300 hover:text-green-400 transition-colors duration-200 py-4 px-6 rounded-lg hover:bg-slate-800/50 font-medium"
+                >
+                  {item.label}
+                </button>
+              ))}
+              <div className="flex flex-col space-y-4 pt-6 border-t border-slate-800">
+                {PERSONAL_INFO.cvUrl && (
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    href={PERSONAL_INFO.cvUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full border-slate-600 text-slate-300 hover:bg-slate-800 hover:text-green-400 py-3"
+                  >
+                    CV İndir
+                  </Button>
+                )}
+                <Button
+                  variant="primary"
+                  size="sm"
+                  onClick={() => scrollToSection('#contact')}
+                  className="w-full bg-green-500 hover:bg-green-600 text-slate-900 font-semibold py-3"
+                >
+                  İletişime Geç
+                </Button>
+              </div>
+            </nav>
+          </div>
         )}
-      </AnimatePresence>
+      </div>
     </header>
   );
 };

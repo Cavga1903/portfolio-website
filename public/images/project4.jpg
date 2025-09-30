@@ -1,2 +1,6 @@
-# Placeholder for project 4 image
-# This is a placeholder file. Replace with actual project image.
+<svg width="400" height="250" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="250" fill="#0f172a"/>
+  <rect x="50" y="50" width="300" height="150" rx="10" fill="#1e293b"/>
+  <text x="200" y="130" text-anchor="middle" fill="#f59e0b" font-family="Arial" font-size="18" font-weight="bold">Project 4</text>
+  <text x="200" y="150" text-anchor="middle" fill="#64748b" font-family="Arial" font-size="14">Full Stack App</text>
+</svg>
