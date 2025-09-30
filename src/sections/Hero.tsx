@@ -15,18 +15,8 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center bg-slate-900 relative overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-96 h-96 bg-green-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl animate-pulse delay-500"></div>
-        
-        {/* Grid Pattern */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(20,241,149,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(20,241,149,0.03)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
-      </div>
-      
-      <div className="container-max section-padding relative z-10">
+    <section id="home" className="min-h-screen flex items-center justify-center bg-slate-900 text-white py-20 px-4">
+      <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <motion.div 
@@ -36,38 +26,18 @@ const Hero: React.FC = () => {
             transition={{ duration: 0.8, ease: 'easeOut' }}
           >
             <div className="space-y-6">
-              <motion.h1 
-                className="text-5xl md:text-7xl font-display font-bold leading-tight"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-              >
+              <h1 className="text-5xl md:text-7xl font-bold text-white">
                 Merhaba, Ben{' '}
-                <motion.span 
-                  className="gradient-text"
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: 0.4 }}
-                >
+                <span className="text-green-400">
                   {PERSONAL_INFO.name}
-                </motion.span>
-              </motion.h1>
-              <motion.h2 
-                className="text-2xl md:text-4xl font-display font-semibold text-slate-300"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-              >
+                </span>
+              </h1>
+              <h2 className="text-2xl md:text-4xl font-semibold text-gray-300">
                 {PERSONAL_INFO.title}
-              </motion.h2>
-              <motion.p 
-                className="text-lg md:text-xl text-slate-400 max-w-2xl leading-relaxed"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
-              >
+              </h2>
+              <p className="text-lg md:text-xl text-gray-400 max-w-2xl">
                 {PERSONAL_INFO.description}
-              </motion.p>
+              </p>
             </div>
 
             {/* Location */}

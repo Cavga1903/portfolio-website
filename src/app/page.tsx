@@ -12,7 +12,7 @@ import Footer from '@/sections/Footer';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-slate-900">
+    <div className="min-h-screen bg-slate-900 text-white">
       <Header />
       <main>
         <Hero />
