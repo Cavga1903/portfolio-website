@@ -3,7 +3,6 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { Button } from '@/components/ui';
 import { PERSONAL_INFO } from '@/data/personalInfo';
 
 const Hero: React.FC = () => {
@@ -35,7 +34,7 @@ const Hero: React.FC = () => {
             <div className="space-y-4 sm:space-y-6 lg:space-y-8">
               <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white leading-tight">
                 Merhaba, Ben{' '}
-                <span className="text-green-400 bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent">
                   {PERSONAL_INFO.name}
                 </span>
               </h1>

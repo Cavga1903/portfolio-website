@@ -39,7 +39,7 @@ const Skills: React.FC = () => {
         </div>
 
         <div className="space-y-12 sm:space-y-16 lg:space-y-20">
-          {Object.entries(skillsByCategory).map(([category, skills], categoryIndex) => (
+          {Object.entries(skillsByCategory).map(([category, skills]) => (
             <div key={category} className="content-center">
               <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-slate-200 mb-6 sm:mb-8 lg:mb-10">
                 {categoryLabels[category as keyof typeof categoryLabels]}
