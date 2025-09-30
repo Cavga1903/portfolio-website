@@ -1,0 +1,68 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "about": "Über mich",
+    "skills": "Fähigkeiten",
+    "projects": "Projekte",
+    "experience": "Erfahrung",
+    "contact": "Kontakt",
+    "downloadCv": "CV Herunterladen",
+    "getInTouch": "Kontakt aufnehmen"
+  },
+  "hero": {
+    "title": "Hallo, ich bin",
+    "name": "Tolga Çavga",
+    "subtitle": "Full Stack Entwickler",
+    "description": "Ein erfahrener Softwareentwickler, der sich auf die Entwicklung performanter und skalierbarer Anwendungen mit modernen Webtechnologien konzentriert und dabei die Benutzererfahrung priorisiert.",
+    "cta": "Meine Projekte ansehen",
+    "contact": "Kontakt aufnehmen"
+  },
+  "about": {
+    "title": "Über mich",
+    "description": "Als technologiebegeisterter Softwareentwickler konzentriere ich mich auf die Entwicklung performanter Lösungen mit modernen Webtechnologien und priorisiere dabei die Benutzererfahrung.",
+    "experience": "Jahre Erfahrung",
+    "projects": "Abgeschlossene Projekte",
+    "clients": "Zufriedene Kunden",
+    "technologies": "Technologien"
+  },
+  "skills": {
+    "title": "Meine Fähigkeiten",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "tools": "Werkzeuge",
+    "languages": "Sprachen",
+    "continuousLearning": "Kontinuierliches Lernen"
+  },
+  "projects": {
+    "title": "Meine Projekte",
+    "description": "Sie können einige der von mir entwickelten Projekte erkunden. Jedes Projekt wird mit verschiedenen Technologien und Ansätzen erstellt.",
+    "allProjects": "Alle Projekte",
+    "featured": "Hervorgehoben",
+    "liveDemo": "Live Demo",
+    "github": "GitHub",
+    "moreProjects": "Möchten Sie mehr Projekte sehen?",
+    "moreProjectsDesc": "Sie können mehr Projekte und Open-Source-Beiträge in meinem GitHub-Konto erkunden. Sie können mir auch folgen, um Updates zu neuen Projekten zu erhalten.",
+    "viewGitHub": "Auf GitHub ansehen",
+    "suggestProject": "Projekt vorschlagen"
+  },
+  "experience": {
+    "title": "Meine Erfahrung",
+    "description": "Während meiner Karriere habe ich durch die Arbeit an verschiedenen Projekten tiefgreifende Erfahrungen in Frontend- und Backend-Technologien gesammelt."
+  },
+  "contact": {
+    "title": "Kontakt",
+    "description": "Wenn Sie über Ihre Projekte sprechen oder zusammenarbeiten möchten, können Sie mich kontaktieren.",
+    "contactInfo": "Kontaktinformationen",
+    "name": "Name",
+    "email": "E-Mail",
+    "message": "Nachricht",
+    "send": "Senden",
+    "sending": "Wird gesendet...",
+    "success": "Ihre Nachricht wurde erfolgreich gesendet!",
+    "error": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut."
+  },
+  "footer": {
+    "rights": "Alle Rechte vorbehalten.",
+    "builtWith": "Erstellt mit Next.js und Tailwind CSS."
+  }
+}

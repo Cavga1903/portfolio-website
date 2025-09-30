@@ -1,89 +1,68 @@
 {
-  "Hero": {
-    "greeting": "Hello, I'm",
-    "title": "Mobile Frontend Developer",
-    "subtitle": "React Native & React.js Expert",
-    "description": "Freelance Mobile Frontend Developer with experience in Supabase, Tailwind CSS, and RESTful APIs. Currently pursuing a B.Sc. in Computer Science at University of the People, with hands-on training from Siliconmade Academy. Focused on building user-centered applications with clean code and dynamic UI.",
-    "viewProjects": "View My Projects",
-    "getInTouch": "Get In Touch"
-  },
-  "Navbar": {
+  "nav": {
     "home": "Home",
     "about": "About",
     "skills": "Skills",
     "projects": "Projects",
     "experience": "Experience",
     "contact": "Contact",
-    "downloadCV": "Download CV"
+    "downloadCv": "Download CV",
+    "getInTouch": "Get In Touch"
   },
-  "About": {
+  "hero": {
+    "title": "Hello, I'm",
+    "name": "Tolga Çavga",
+    "subtitle": "Full Stack Developer",
+    "description": "An experienced software developer who focuses on creating performant and scalable applications with modern web technologies, prioritizing user experience.",
+    "cta": "View My Projects",
+    "contact": "Get In Touch"
+  },
+  "about": {
     "title": "About Me",
-    "description": "As a technology enthusiast software developer, I focus on producing user experience-oriented and high-performance solutions with modern web technologies.",
-    "passions": "My Passions",
-    "passion1": "Modern web technologies",
-    "passion2": "User experience design",
-    "passion3": "Performance optimization",
-    "passion4": "Open source projects",
-    "passion5": "Technical writing",
-    "passion6": "Mentoring and training",
-    "stats": {
-      "experience": "Years Experience",
-      "projects": "Completed Projects",
-      "clients": "Happy Clients",
-      "technologies": "Technologies"
-    }
+    "description": "As a technology enthusiast software developer, I focus on creating performant solutions with modern web technologies while prioritizing user experience.",
+    "experience": "Years Experience",
+    "projects": "Completed Projects",
+    "clients": "Happy Clients",
+    "technologies": "Technologies"
   },
-  "Skills": {
+  "skills": {
     "title": "My Skills",
-    "description": "I have comprehensive experience in modern web development technologies. I focus on continuous learning and self-improvement.",
-    "continuousLearning": "Continuous Learning",
-    "learningDescription": "The technology world is changing rapidly and I continue to learn continuously to keep up with this change. I follow new technologies, apply them in my projects and share them with the community.",
-    "onlineCourses": "Online Courses",
-    "openSource": "Open Source Contributions",
-    "technicalBlogs": "Technical Blog Posts",
-    "conferences": "Conferences and Events"
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "tools": "Tools",
+    "languages": "Languages",
+    "continuousLearning": "Continuous Learning"
   },
-  "Projects": {
+  "projects": {
     "title": "My Projects",
-    "description": "You can examine some of the projects I have developed. Each project has been created using different technologies and approaches.",
+    "description": "You can explore some of the projects I've developed. Each project is created using different technologies and approaches.",
     "allProjects": "All Projects",
     "featured": "Featured",
-    "seeMore": "Want to See More Projects?",
-    "seeMoreDescription": "You can examine more projects and open source contributions on my GitHub account. You can also follow me to get up-to-date information about new projects.",
-    "viewOnGitHub": "View on GitHub",
+    "liveDemo": "Live Demo",
+    "github": "GitHub",
+    "moreProjects": "Want to See More Projects?",
+    "moreProjectsDesc": "You can explore more projects and open source contributions on my GitHub account. You can also follow me for updates on new projects.",
+    "viewGitHub": "View on GitHub",
     "suggestProject": "Suggest a Project"
   },
-  "Experience": {
+  "experience": {
     "title": "My Experience",
-    "description": "I have gained comprehensive experience by working in different companies and projects throughout my career. I learned new skills in each position and constantly improved myself.",
-    "corporateExperience": "Corporate Experience",
-    "corporateDescription": "Experience working in large teams and managing complex projects",
-    "fastLearning": "Fast Learning",
-    "fastLearningDescription": "Ability to quickly learn new technologies and apply them in projects",
-    "teamwork": "Teamwork",
-    "teamworkDescription": "Experience working in different roles and team leadership"
+    "description": "Throughout my career, I have gained in-depth experience in frontend and backend technologies by working on different projects."
   },
-  "Contact": {
-    "title": "Get In Touch",
-    "description": "You can contact me to talk about your projects, collaborate or just say hello. I will get back to you as soon as possible.",
+  "contact": {
+    "title": "Contact",
+    "description": "If you want to talk about your projects or collaborate, you can get in touch with me.",
     "contactInfo": "Contact Information",
-    "socialMedia": "Social Media",
-    "sendMessage": "Send Message",
-    "name": "Full Name",
+    "name": "Name",
     "email": "Email",
-    "subject": "Subject",
     "message": "Message",
+    "send": "Send",
     "sending": "Sending...",
-    "send": "Send Message",
-    "success": "Your message has been sent successfully! I will get back to you as soon as possible.",
-    "error": "An error occurred while sending the message. Please try again."
+    "success": "Your message has been sent successfully!",
+    "error": "An error occurred. Please try again."
   },
-  "Footer": {
-    "description": "A software developer who develops user experience-oriented, high-performance and scalable applications with modern web technologies.",
-    "quickLinks": "Quick Links",
-    "contact": "Contact",
+  "footer": {
     "rights": "All rights reserved.",
-    "madeWith": "Made with Next.js & Tailwind CSS",
-    "madeIn": "Made in İzmir"
+    "builtWith": "Built with Next.js and Tailwind CSS."
   }
 }
