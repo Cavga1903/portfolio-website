@@ -1,3 +1,5 @@
+'use client';
+
 import Header from '@/sections/Header';
 import Hero from '@/sections/Hero';
 import About from '@/sections/About';
@@ -10,7 +12,7 @@ import Footer from '@/sections/Footer';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900">
+    <div className="min-h-screen bg-slate-900">
       <Header />
       <main>
         <Hero />

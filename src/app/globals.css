@@ -39,7 +39,7 @@
 /* Custom component styles */
 @layer components {
   .btn-primary {
-    @apply bg-accent-500 hover:bg-accent-600 text-slate-900 font-semibold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-accent-500/25 transform hover:-translate-y-1 hover:scale-105;
+    @apply bg-green-500 hover:bg-green-600 text-slate-900 font-semibold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/25 transform hover:-translate-y-1 hover:scale-105;
   }
   
   .btn-secondary {
@@ -51,7 +51,7 @@
   }
   
   .gradient-text {
-    @apply bg-gradient-to-r from-accent-400 via-neon-cyan to-accent-500 bg-clip-text text-transparent font-display;
+    @apply bg-gradient-to-r from-green-400 via-cyan-400 to-green-500 bg-clip-text text-transparent font-display;
   }
   
   .gradient-text-dark {
@@ -67,7 +67,7 @@
   }
   
   .neon-glow {
-    @apply shadow-lg shadow-accent-500/20;
+    @apply shadow-lg shadow-green-500/20;
   }
   
   .glass-effect {
@@ -75,15 +75,15 @@
   }
   
   .skill-card {
-    @apply group bg-slate-800/40 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-accent-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-accent-500/10 hover:-translate-y-2;
+    @apply group bg-slate-800/40 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-green-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-green-500/10 hover:-translate-y-2;
   }
   
   .timeline-dot {
-    @apply w-4 h-4 bg-accent-500 rounded-full border-4 border-slate-900 shadow-lg;
+    @apply w-4 h-4 bg-green-500 rounded-full border-4 border-slate-900 shadow-lg;
   }
   
   .timeline-line {
-    @apply w-0.5 bg-gradient-to-b from-accent-500 via-slate-600 to-slate-700;
+    @apply w-0.5 bg-gradient-to-b from-green-500 via-slate-600 to-slate-700;
   }
 }
 

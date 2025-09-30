@@ -123,10 +123,10 @@ const Skills: React.FC = () => {
               viewport={{ once: true }}
             >
               {[
-                { text: "Online Kurslar", color: "bg-accent-500/20 text-accent-400 border-accent-500/30" },
-                { text: "Açık Kaynak Katkıları", color: "bg-neon-cyan/20 text-neon-cyan border-neon-cyan/30" },
-                { text: "Teknik Blog Yazıları", color: "bg-neon-purple/20 text-neon-purple border-neon-purple/30" },
-                { text: "Konferans ve Etkinlikler", color: "bg-accent-500/20 text-accent-400 border-accent-500/30" }
+                { text: "Online Kurslar", color: "bg-green-500/20 text-green-400 border-green-500/30" },
+                { text: "Açık Kaynak Katkıları", color: "bg-cyan-500/20 text-cyan-400 border-cyan-500/30" },
+                { text: "Teknik Blog Yazıları", color: "bg-purple-500/20 text-purple-400 border-purple-500/30" },
+                { text: "Konferans ve Etkinlikler", color: "bg-green-500/20 text-green-400 border-green-500/30" }
               ].map((item, index) => (
                 <motion.div
                   key={index}
