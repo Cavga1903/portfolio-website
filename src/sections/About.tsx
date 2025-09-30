@@ -3,10 +3,10 @@ import { PERSONAL_INFO } from '@/data/personalInfo';
 
 const About: React.FC = () => {
   return (
-    <section id="about" className="py-16 sm:py-20 lg:py-24 bg-slate-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 sm:mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6">
+    <section id="about" className="section-spacing bg-slate-800">
+      <div className="max-w-7xl mx-auto container-spacing">
+        <div className="text-center mb-16 sm:mb-20 lg:mb-24">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 sm:mb-8">
             <span className="bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent">
               Hakkımda
             </span>
@@ -17,10 +17,10 @@ const About: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Content */}
-          <div className="space-y-6">
-            <div className="space-y-4">
+          <div className="space-y-8">
+            <div className="space-y-6">
               <p className="text-gray-300 leading-relaxed text-base sm:text-lg">
                 {PERSONAL_INFO.description}
               </p>
@@ -39,7 +39,7 @@ const About: React.FC = () => {
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-2 gap-4 sm:gap-6 pt-6 sm:pt-8">
+            <div className="grid grid-cols-2 gap-6 sm:gap-8 pt-8 sm:pt-12">
               <div className="text-center p-4 bg-slate-700/50 rounded-xl">
                 <div className="text-2xl sm:text-3xl font-bold text-green-400 mb-2">
                   5+

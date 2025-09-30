@@ -14,8 +14,8 @@ const Projects: React.FC = () => {
     : PROJECTS;
 
   return (
-    <section id="projects" className="section-padding bg-gradient-to-b from-gray-50 to-white dark:from-gray-800 dark:to-gray-900">
-      <div className="container-max">
+    <section id="projects" className="section-spacing bg-slate-800">
+      <div className="max-w-7xl mx-auto container-spacing">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
             Projelerim

@@ -23,8 +23,8 @@ const Hero: React.FC = () => {
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl"></div>
       </div>
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+      <div className="max-w-7xl mx-auto container-spacing py-20 sm:py-24 lg:py-32 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Content */}
           <motion.div 
             className="space-y-8"
@@ -32,7 +32,7 @@ const Hero: React.FC = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
           >
-            <div className="space-y-4 sm:space-y-6">
+            <div className="space-y-6 sm:space-y-8">
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
                 Merhaba, Ben{' '}
                 <span className="text-green-400 bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent">
@@ -64,7 +64,7 @@ const Hero: React.FC = () => {
 
             {/* CTA Buttons */}
             <motion.div 
-              className="flex flex-col sm:flex-row gap-4 mt-8"
+              className="flex flex-col sm:flex-row gap-4 mt-10"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
@@ -85,7 +85,7 @@ const Hero: React.FC = () => {
 
             {/* Social Links */}
             <motion.div 
-              className="flex flex-wrap gap-4 mt-8"
+              className="flex flex-wrap gap-4 mt-12"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1.0 }}

@@ -5,11 +5,11 @@ import { EXPERIENCES } from '@/data/experience';
 
 const Experience: React.FC = () => {
   return (
-    <section id="experience" className="section-padding bg-slate-800 relative overflow-hidden">
+    <section id="experience" className="section-spacing bg-slate-900 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(20,241,149,0.01)_1px,transparent_1px),linear-gradient(90deg,rgba(20,241,149,0.01)_1px,transparent_1px)] bg-[size:60px_60px]"></div>
       
-      <div className="container-max relative z-10">
+      <div className="max-w-7xl mx-auto container-spacing relative z-10">
         <div className="text-center mb-20">
           <motion.h2 
             className="text-4xl md:text-6xl font-display font-bold mb-6"

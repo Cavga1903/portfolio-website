@@ -21,13 +21,13 @@ const Skills: React.FC = () => {
   };
 
   return (
-    <section id="skills" className="py-16 sm:py-20 lg:py-24 bg-slate-900 relative overflow-hidden">
+    <section id="skills" className="section-spacing bg-slate-900 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(20,241,149,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(20,241,149,0.02)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-12 sm:mb-16 lg:mb-20">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
+      <div className="max-w-7xl mx-auto container-spacing relative z-10">
+        <div className="text-center mb-16 sm:mb-20 lg:mb-24">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 sm:mb-8">
             <span className="bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent">
               Yeteneklerim
             </span>
@@ -38,13 +38,13 @@ const Skills: React.FC = () => {
           </p>
         </div>
 
-        <div className="space-y-12 sm:space-y-16">
+        <div className="space-y-16 sm:space-y-20">
           {Object.entries(skillsByCategory).map(([category, skills], categoryIndex) => (
             <div key={category}>
-              <h3 className="text-2xl sm:text-3xl font-bold text-slate-200 mb-6 sm:mb-8 text-center">
+              <h3 className="text-2xl sm:text-3xl font-bold text-slate-200 mb-8 sm:mb-10 text-center">
                 {categoryLabels[category as keyof typeof categoryLabels]}
               </h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8">
                 {skills.map((skill) => (
                   <SkillCard key={skill.id} skill={skill} />
                 ))}
