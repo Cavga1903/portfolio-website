@@ -18,13 +18,13 @@ const Hero: React.FC = () => {
     <section id="home" className="min-h-screen flex items-center justify-center bg-slate-900 text-white relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-20 right-20 w-72 h-72 bg-green-500/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 left-20 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-10 right-10 sm:top-20 sm:right-20 w-48 h-48 sm:w-72 sm:h-72 bg-green-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-10 left-10 sm:bottom-20 sm:left-20 w-64 h-64 sm:w-96 sm:h-96 bg-cyan-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 sm:w-80 sm:h-80 bg-purple-500/5 rounded-full blur-3xl"></div>
       </div>
       
-      <div className="max-w-7xl mx-auto container-spacing py-20 sm:py-24 lg:py-32 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <div className="w-full max-w-7xl mx-auto container-spacing py-16 sm:py-20 lg:py-24 xl:py-32 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 xl:gap-20 items-center">
           {/* Content */}
           <motion.div 
             className="space-y-8"
@@ -32,17 +32,17 @@ const Hero: React.FC = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
           >
-            <div className="space-y-6 sm:space-y-8">
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
+            <div className="space-y-4 sm:space-y-6 lg:space-y-8">
+              <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white leading-tight">
                 Merhaba, Ben{' '}
                 <span className="text-green-400 bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent">
                   {PERSONAL_INFO.name}
                 </span>
               </h1>
-              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-300">
+              <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold text-gray-300">
                 {PERSONAL_INFO.title}
               </h2>
-              <p className="text-base sm:text-lg md:text-xl text-gray-400 max-w-2xl leading-relaxed">
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-400 max-w-2xl leading-relaxed">
                 {PERSONAL_INFO.description}
               </p>
             </div>

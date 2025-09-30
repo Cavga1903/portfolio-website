@@ -16,11 +16,11 @@ const Projects: React.FC = () => {
   return (
     <section id="projects" className="section-spacing bg-slate-800">
       <div className="max-w-7xl mx-auto container-spacing">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+        <div className="content-center mb-12 sm:mb-16 lg:mb-20">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6">
             Projelerim
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-8">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 max-w-3xl mx-auto mb-6 sm:mb-8">
             Geliştirdiğim projelerden bazılarını inceleyebilirsiniz. Her proje, 
             farklı teknolojiler ve yaklaşımlar kullanılarak oluşturulmuştur.
           </p>
@@ -46,7 +46,7 @@ const Projects: React.FC = () => {
 
         {/* Projects Grid */}
         <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="responsive-grid"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
