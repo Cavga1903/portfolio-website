@@ -33,7 +33,7 @@ const Experience: React.FC = () => {
         </div>
 
         {/* Timeline */}
-        <div className="relative">
+        <div className="relative max-w-6xl mx-auto">
           {/* Timeline Line */}
           <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 timeline-line transform md:-translate-x-0.5"></div>
           
@@ -51,7 +51,7 @@ const Experience: React.FC = () => {
                 <div className="absolute left-6 md:left-1/2 w-4 h-4 timeline-dot transform md:-translate-x-2 z-10"></div>
                 
                 {/* Content */}
-                <div className={`ml-16 md:ml-0 w-full ${index % 2 === 0 ? 'md:pr-8 md:text-right' : 'md:pl-8'}`}>
+                <div className={`ml-16 md:ml-0 w-full ${index % 2 === 0 ? 'md:pr-8 md:text-center' : 'md:pl-8 md:text-center'}`}>
                   <motion.div
                     className="w-full"
                     initial={{ opacity: 0, y: 20 }}

@@ -46,7 +46,7 @@ const Projects: React.FC = () => {
 
         {/* Projects Grid */}
         <motion.div 
-          className="responsive-grid"
+          className="responsive-grid max-w-6xl mx-auto"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}

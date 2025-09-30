@@ -40,11 +40,11 @@ const Skills: React.FC = () => {
 
         <div className="space-y-12 sm:space-y-16 lg:space-y-20">
           {Object.entries(skillsByCategory).map(([category, skills], categoryIndex) => (
-            <div key={category}>
-              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-slate-200 mb-6 sm:mb-8 lg:mb-10 content-center">
+            <div key={category} className="content-center">
+              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-slate-200 mb-6 sm:mb-8 lg:mb-10">
                 {categoryLabels[category as keyof typeof categoryLabels]}
               </h3>
-              <div className="responsive-grid">
+              <div className="responsive-grid max-w-6xl mx-auto">
                 {skills.map((skill) => (
                   <SkillCard key={skill.id} skill={skill} />
                 ))}

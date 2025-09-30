@@ -19,19 +19,19 @@ const About: React.FC = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 xl:gap-20 items-center">
           {/* Content */}
-          <div className="content-left space-y-6 sm:space-y-8">
+          <div className="content-center space-y-6 sm:space-y-8">
             <div className="space-y-4 sm:space-y-6">
-              <p className="text-gray-300 leading-relaxed responsive-text">
+              <p className="text-gray-300 leading-relaxed responsive-text text-center">
                 {PERSONAL_INFO.description}
               </p>
               
-              <p className="text-gray-300 leading-relaxed responsive-text">
+              <p className="text-gray-300 leading-relaxed responsive-text text-center">
                 Kariyerim boyunca farklı projelerde çalışarak, frontend ve backend teknolojilerinde 
                 derinlemesine deneyim kazandım. Özellikle React ekosistemi, Node.js ve modern 
                 veritabanı teknolojileri konularında uzmanlaştım.
               </p>
               
-              <p className="text-gray-300 leading-relaxed responsive-text">
+              <p className="text-gray-300 leading-relaxed responsive-text text-center">
                 Sürekli öğrenmeye ve kendimi geliştirmeye odaklanırım. Yeni teknolojileri takip eder, 
                 projelerimde uygular ve toplulukla paylaşırım. Açık kaynak projelere katkıda bulunmayı 
                 ve teknik yazılar yazmayı seviyorum.
