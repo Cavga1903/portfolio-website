@@ -47,7 +47,7 @@ const Header: React.FC = () => {
       <div className="max-w-7xl mx-auto container-spacing">
         <div className="flex items-center justify-between h-14 sm:h-16 lg:h-18">
           {/* Logo */}
-          <Link href="#home" className="flex items-center space-x-2 sm:space-x-3">
+          <Link href="#home" className="flex items-center space-x-2 sm:space-x-3 mr-8 lg:mr-12">
             <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-r from-green-500 to-cyan-500 rounded-lg flex items-center justify-center shadow-lg">
               <span className="text-white font-bold text-lg sm:text-xl">
                 {PERSONAL_INFO.name.charAt(0)}
@@ -59,12 +59,12 @@ const Header: React.FC = () => {
           </Link>
 
           {/* Tablet Navigation */}
-          <nav className="hidden md:flex lg:hidden items-center space-x-4">
+          <nav className="hidden md:flex lg:hidden items-center space-x-6">
             {navItems.slice(0, 4).map((item) => (
               <button
                 key={item.href}
                 onClick={() => scrollToSection(item.href)}
-                className="text-slate-300 hover:text-green-400 transition-colors duration-200 font-medium text-xs py-2 px-2 rounded-lg hover:bg-slate-800/50"
+                className="text-slate-300 hover:text-green-400 transition-colors duration-200 font-medium text-xs py-2 px-3 rounded-lg hover:bg-slate-800/50"
               >
                 {item.label}
               </button>
@@ -72,12 +72,12 @@ const Header: React.FC = () => {
           </nav>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8">
+          <nav className="hidden lg:flex items-center space-x-8 xl:space-x-10">
             {navItems.map((item) => (
               <button
                 key={item.href}
                 onClick={() => scrollToSection(item.href)}
-                className="navbar-link text-slate-300 hover:text-green-400 transition-colors duration-200 font-medium text-sm xl:text-base py-2 px-3 rounded-lg hover:bg-slate-800/50"
+                className="navbar-link text-slate-300 hover:text-green-400 transition-colors duration-200 font-medium text-sm xl:text-base py-2 px-4 rounded-lg hover:bg-slate-800/50"
               >
                 {item.label}
               </button>
@@ -85,7 +85,7 @@ const Header: React.FC = () => {
           </nav>
 
           {/* CTA Buttons */}
-          <div className="hidden md:flex items-center space-x-3 lg:space-x-4">
+          <div className="hidden md:flex items-center space-x-4 lg:space-x-6">
             {PERSONAL_INFO.cvUrl && (
               <Button
                 variant="outline"
@@ -93,7 +93,7 @@ const Header: React.FC = () => {
                 href={PERSONAL_INFO.cvUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xs sm:text-sm px-3 py-2 border-slate-600 text-slate-300 hover:bg-slate-800 hover:text-green-400"
+                className="text-xs sm:text-sm px-4 py-2 border-slate-600 text-slate-300 hover:bg-slate-800 hover:text-green-400"
               >
                 CV İndir
               </Button>
@@ -102,7 +102,7 @@ const Header: React.FC = () => {
               variant="primary"
               size="sm"
               onClick={() => scrollToSection('#contact')}
-              className="text-xs sm:text-sm px-4 py-2 bg-green-500 hover:bg-green-600 text-slate-900 font-semibold"
+              className="text-xs sm:text-sm px-5 py-2 bg-green-500 hover:bg-green-600 text-slate-900 font-semibold"
             >
               İletişime Geç
             </Button>
@@ -141,18 +141,18 @@ const Header: React.FC = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-slate-800 bg-slate-900/95 backdrop-blur-md">
-            <nav className="flex flex-col space-y-2">
+          <div className="md:hidden py-6 border-t border-slate-800 bg-slate-900/95 backdrop-blur-md">
+            <nav className="flex flex-col space-y-3">
               {navItems.map((item) => (
                 <button
                   key={item.href}
                   onClick={() => scrollToSection(item.href)}
-                  className="text-left text-slate-300 hover:text-green-400 transition-colors duration-200 py-3 px-4 rounded-lg hover:bg-slate-800/50 font-medium"
+                  className="text-left text-slate-300 hover:text-green-400 transition-colors duration-200 py-4 px-6 rounded-lg hover:bg-slate-800/50 font-medium"
                 >
                   {item.label}
                 </button>
               ))}
-              <div className="flex flex-col space-y-3 pt-4 border-t border-slate-800">
+              <div className="flex flex-col space-y-4 pt-6 border-t border-slate-800">
                 {PERSONAL_INFO.cvUrl && (
                   <Button
                     variant="outline"
@@ -160,7 +160,7 @@ const Header: React.FC = () => {
                     href={PERSONAL_INFO.cvUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full border-slate-600 text-slate-300 hover:bg-slate-800 hover:text-green-400"
+                    className="w-full border-slate-600 text-slate-300 hover:bg-slate-800 hover:text-green-400 py-3"
                   >
                     CV İndir
                   </Button>
@@ -169,7 +169,7 @@ const Header: React.FC = () => {
                   variant="primary"
                   size="sm"
                   onClick={() => scrollToSection('#contact')}
-                  className="w-full bg-green-500 hover:bg-green-600 text-slate-900 font-semibold"
+                  className="w-full bg-green-500 hover:bg-green-600 text-slate-900 font-semibold py-3"
                 >
                   İletişime Geç
                 </Button>
